@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOR HER — Our Little Archive</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:#e9e3d8;
+  color:#171717;
+  font-family:"DM Mono",monospace;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed;inset:0;pointer-events:none;opacity:.12;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+  z-index:20;
+}
+.wrap{width:min(1120px,92vw);margin:auto}
+.top{
+  min-height:92vh;display:flex;flex-direction:column;justify-content:space-between;
+  padding:28px 0 36px;border-bottom:2px solid #171717;
+}
+.meta{display:flex;justify-content:space-between;gap:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.kicker{margin-top:12vh;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+h1{
+  font-family:"Playfair Display",serif;font-size:clamp(78px,18vw,220px);
+  line-height:.72;margin:18px 0 28px;letter-spacing:-.07em;font-weight:500;
+}
+.red{color:#b52626}
+.blue{color:#273b78}
+.hero-note{max-width:560px;font-size:13px;line-height:1.8}
+.hero-note em{font-family:"Playfair Display",serif;font-size:24px;line-height:1.1}
+.scroll{font-size:10px;letter-spacing:.15em;text-transform:uppercase;margin-top:50px}
+
+section{padding:100px 0;border-bottom:2px solid #171717}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:45px}
+.num{font-size:11px}
+h2{
+  font-family:"Playfair Display",serif;font-size:clamp(48px,8vw,92px);
+  line-height:.9;font-weight:500;letter-spacing:-.05em;margin:0;max-width:720px;
+}
+.copy{font-size:13px;line-height:1.9;max-width:650px}
+.copy strong{font-family:"Playfair Display",serif;font-size:22px;font-weight:500}
+
+.archive{
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;
+}
+.photo{
+  background:#d8d0c3;border:2px solid #171717;padding:10px;
+  transform:rotate(-1deg);box-shadow:8px 8px 0 #171717;
+}
+.photo:nth-child(2){transform:rotate(1.2deg);margin-top:70px}
+.photo:nth-child(3){grid-column:1/-1;width:min(650px,100%);margin:10px auto 0;transform:rotate(-.5deg)}
+.photo img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
+.photo.tall img{aspect-ratio:9/13}
+.caption{padding:13px 3px 2px;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+
+.music{
+  border:2px solid #171717;background:#f2eee6;padding:26px;
+  box-shadow:10px 10px 0 #273b78;
+}
+.music-top{display:flex;justify-content:space-between;gap:25px;align-items:start}
+.music-title{font-family:"Playfair Display",serif;font-size:42px;line-height:1}
+.music small{font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+audio{width:100%;margin-top:28px}
+
+.note{
+  background:#b52626;color:#f7efe4;padding:55px 45px;
+  transform:rotate(-1deg);box-shadow:10px 10px 0 #171717;
+}
+.note h3{font-family:"Playfair Display",serif;font-size:clamp(42px,7vw,78px);font-weight:500;line-height:.9;margin:0 0 30px}
+.note p{font-size:13px;line-height:1.9;max-width:700px}
+
+footer{padding:70px 0 100px;text-align:center}
+.footer-big{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(38px,7vw,76px)}
+.footer-small{font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-top:20px}
+
+@media(max-width:700px){
+  .top{min-height:88vh}
+  .meta{font-size:9px}
+  h1{font-size:24vw}
+  section{padding:70px 0}
+  .section-head{display:block}
+  .section-head .num{margin-bottom:18px}
+  .archive{grid-template-columns:1fr}
+  .photo:nth-child(2){margin-top:0}
+  .photo:nth-child(3){grid-column:auto}
+  .note{padding:38px 25px}
+  .music-top{display:block}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="meta">
+    <span>PRIVATE ARCHIVE / 001</span>
+    <span>FOR HER</span>
+  </div>
+
+  <div>
+    <div class="kicker">A small apology disguised as a little website</div>
+    <h1>FOR<br><span class="red">HER.</span></h1>
+    <div class="hero-note">
+      <em>I found out about the surprise before I was supposed to.</em><br><br>
+      So this is not me trying to steal the moment. It's just me saying sorry,
+      and keeping a tiny record of the moments that already mean a lot to me.
+    </div>
+  </div>
+
+  <div class="scroll">↓ keep scrolling / there's more</div>
+</header>
+
+<section>
+  <div class="section-head">
+    <div class="num">01 / THE APOLOGY</div>
+    <h2>Okay.<br>I messed up.</h2>
+  </div>
+  <div class="copy">
+    <p><strong>I know the surprise was supposed to be a surprise.</strong></p>
+    <p>
+      I shouldn't have gone looking for the plans or let my curiosity get the
+      better of me. I'm genuinely sorry for taking away even a little bit of
+      the mystery you were trying to create.
+    </p>
+    <p>
+      I don't want this page to replace your surprise. If anything, I want it
+      to say that I appreciate the thought behind it even more now.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div class="num">02 / OUR LITTLE ARCHIVE</div>
+    <h2>Some things<br>worth keeping.</h2>
+  </div>
+
+  <div class="archive">
+    <div class="photo tall">
+      <img src="photos/photo1.jpg" alt="Us together">
+      <div class="caption">Frame 01 / one of my favourites</div>
+    </div>
+
+    <div class="photo tall">
+      <img src="photos/photo2.jpg" alt="Us together">
+      <div class="caption">Frame 02 / another little memory</div>
+    </div>
+
+    <div class="photo">
+      <img src="photos/photo3.jpg" alt="Illustrated portrait of us">
+      <div class="caption">Frame 03 / us, in another form</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div class="num">03 / PRESS PLAY</div>
+    <h2>A song for<br>the archive.</h2>
+  </div>
+
+  <div class="music">
+    <div class="music-top">
+      <div>
+        <small>Now playing</small>
+        <div class="music-title">She Was My Best Moment</div>
+      </div>
+      <div class="num">01:12</div>
+    </div>
+    <audio controls preload="metadata">
+      <source src="music/song.mp3" type="audio/mpeg">
+      Your browser does not support audio playback.
+    </audio>
+  </div>
+</section>
+
+<section>
+  <div class="note">
+    <h3>I still want<br>the surprise.</h3>
+    <p>
+      Even knowing a little doesn't mean I know what the actual moment will
+      feel like. So I'll leave the rest to you. No spoilers from me.
+      Thank you for putting thought into my day — and I'm sorry I got curious
+      before I was supposed to.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-big">keep the good moments.</div>
+  <div class="footer-small">made as a little archive · end of file</div>
+</footer>
+
+</div>
+</body>
+</html>
